@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { Dropdown, MenuProps, Space, Typography } from "antd";
 import { GlobalOutlined } from "@ant-design/icons";
 import { useRouter, usePathname} from "next/navigation";
-
-const  LanguageLabels :Record<string, string> = {
-  en:'English',
-  ro: 'Romania',
-}
+import { useTranslations } from "next-intl";
 
 const LanguageSelector: React.FC = () => {
+  const t = useTranslations();
   const router = useRouter();
   const pathname = usePathname();
   const urlLanguage = pathname.split("/").pop() || 'en';
+  const  LanguageLabels :Record<string, string> = {
+    en:t('english'),
+    ro: t('romanian'),
+  }
   const [currentLanguage, setCurrentLanguage]=useState(LanguageLabels[urlLanguage]);
   const items: MenuProps["items"] = [
     {
