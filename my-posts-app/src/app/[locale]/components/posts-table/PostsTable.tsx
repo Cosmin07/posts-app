@@ -18,6 +18,7 @@ const PostsTable:React.FC= () => {
      const resJson = await res.json();
      // Reduce method to get unique objects
      const unique = resJson.reduce(
+       // eslint-disable-next-line @typescript-eslint/no-explicit-any
        (acc: any[], obj: { userId: number }) => {
          if (
            !acc.some(

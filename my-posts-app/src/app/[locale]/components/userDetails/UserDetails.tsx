@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Card, Typography } from "antd";
 import { User } from "../models/User";
 import { useTranslations } from "next-intl";
-import { useUserDetailsModalStore } from "../user-details-modal/store";
 
 const { Text } = Typography;
 
@@ -14,14 +13,13 @@ const UserDetails: React.FC<UserDetailsProps> = ({ id }) => {
   const t = useTranslations();
   const [data, setData] = useState<User>();
   const [isLoading, setIsLoading] = useState(false);
-  const { selectedUserId} = useUserDetailsModalStore((state)=>state);
 
   const getData = useCallback(
     async (signal: AbortSignal) => {
       setIsLoading(true);
       try {
         const res = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${selectedUserId}`,
+          `https://jsonplaceholder.typicode.com/users/${id}`,
           { signal }
         );
         const resJson = await res.json();
@@ -32,7 +30,7 @@ const UserDetails: React.FC<UserDetailsProps> = ({ id }) => {
         setIsLoading(false);
       }
     },
-    [selectedUserId]
+    [id]
   );
 
   useEffect(() => {
