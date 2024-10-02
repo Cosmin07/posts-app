@@ -1,3 +1,13 @@
 {
-  "pageTitle": "Afisare tabel cu postari"
+  "pageTitle": "Afisare tabel cu postari",
+  "userDetails": "Detaliile Utilizatorului",
+  "email": "Email:",
+  "address": "Adresa",
+  "romanian": "Romana",
+  "english": "Engleza",
+  "viewUserDetails": "Vezi detaliile utilizatorului",
+  "id": "ID",
+  "title": "Titlu",
+  "description": "Descriere",
+  "delete": "Sterge"
 }

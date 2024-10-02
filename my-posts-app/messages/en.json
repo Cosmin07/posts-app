@@ -1,3 +1,13 @@
 {
-  "pageTitle": "Display posts tale"
+  "pageTitle": "Display posts tale",
+  "userDetails": "User Details",
+  "email": "Email:",
+  "address": "Address",
+  "romanian": "Romanian",
+  "english": "English",
+  "viewUserDetails": "View User Details",
+  "id": "ID",
+  "title": "Title",
+  "description": "Description",
+  "delete": "Delete"
 }

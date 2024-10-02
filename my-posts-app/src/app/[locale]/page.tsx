@@ -4,6 +4,7 @@ import { Breadcrumb, Flex, Layout } from "antd";
 import LanguageSelector from "./components/language-selector/LanguageSelector";
 import { useTranslations } from "next-intl";
 import "./../globals.scss";
+import PostsTable from "./components/posts-table/PostsTable";
 
 const { Header, Content } = Layout;
 
@@ -20,7 +21,7 @@ export default function Home() {
             style={{ margin: "16px 0" }}
             items={[{ title: t('pageTitle') }, {}]}
           />
-          Page Content to be defined...
+          <PostsTable/>
         </Content>
       </Layout>
     </Flex>
